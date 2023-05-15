@@ -42,6 +42,7 @@ main {
 
 .game {
   border: 2px solid black;
+  backdrop-filter: blur(2px);
 }
 
 #timer {

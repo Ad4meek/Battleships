@@ -11,8 +11,8 @@ let time = 0;
 let clicked = [];
 
 interval = setInterval(() => {
-  timer.innerHTML = `Čas: ${time}s`;
   time++;
+  timer.innerHTML = `Čas: ${time}s`;
 }, 1000);
 
 for (let index = 0; index < 12; index++) {
