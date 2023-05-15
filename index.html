@@ -1,38 +1,115 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Battle Ships</title>
-    <link rel="stylesheet" href="./res/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap" rel="stylesheet">
-    <script>
-      let gameMode = 'singlePlayer'
-    </script>
-    <script src="./res/js/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./res/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./res/img/shipfavicon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="battleship-grid grid-user"></div>
-      <div class="battleship-grid grid-computer"></div>
-    </div>
-
-    <div class="container hidden-info">
-      <div class="setup-buttons" id="setup-buttons">
-        <button id="start" class="btn">Start Game</button>
-        <button id="rotate" class="btn">Rotate Your Ships</button>
+    <main>
+      <div class="controls">
+        <img src="https://fontmeme.com/permalink/230515/a0fad855a7911f576a76cdb0ce985825.png" alt="pirates-of-the-caribbean-font" border="0">
+        <div id="timer">Čas: 0s</div>
+        <div class="ships">
+          <div id="destroyedShips">Zničené lodě: 0</div>
+          <div class="ship_image"></div>
+        </div>
+        <button id="play_again">Hrát znova!</button>
       </div>
-      <h3 id="whose-go" class="info-text">Your Go</h3>
-      <h3 id="info" class="info-text"></h3>
-    </div>
 
-    <div class="container">
-      <div class="grid-display">
-        <div class="ship destroyer-container" draggable="true"><div id="destroyer-0"></div><div id="destroyer-1"></div></div>
-        <div class="ship submarine-container" draggable="true"><div id="submarine-0"></div><div id="submarine-1"></div><div id="submarine-2"></div></div>
-        <div class="ship cruiser-container" draggable="true"><div id="cruiser-0"></div><div id="cruiser-1"></div><div id="cruiser-2"></div></div>
-        <div class="ship battleship-container" draggable="true"><div id="battleship-0"></div><div id="battleship-1"></div><div id="battleship-2"></div><div id="battleship-3"></div></div>
-        <div class="ship carrier-container" draggable="true"><div id="carrier-0"></div><div id="carrier-1"></div><div id="carrier-2"></div><div id="carrier-3"></div><div id="carrier-4"></div></div>
+      <div class="game">
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="row">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
       </div>
-    </div>
+    </main>
+
+    <script src="./res/js/main.js" charset="utf-8"></script>
   </body>
 </html>
