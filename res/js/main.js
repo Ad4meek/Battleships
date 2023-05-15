@@ -2,6 +2,8 @@ const box = document.getElementsByClassName("box");
 const play_again = document.getElementById("play_again");
 const timer = document.getElementById("timer");
 const destroyedShips = document.getElementById("destroyedShips");
+const overlay_text = document.getElementById("overlay_text");
+const overlay = document.getElementById("overlay");
 
 let array = [];
 let ships = 0;
@@ -13,7 +15,7 @@ interval = setInterval(() => {
   time++;
 }, 1000);
 
-for (let index = 0; index < 16; index++) {
+for (let index = 0; index < 12; index++) {
   let number;
   do {
     number = Math.floor(Math.random() * box.length);
@@ -26,15 +28,22 @@ console.log(array);
 
 [...box].forEach((bx, index) => {
   bx.onclick = () => {
-    if (clicked.includes(index)) return;
-    if (array.includes(index)) {
-      ships++;
+    if (ships == 11) {
+      overlay.style.display = "block";
+      overlay_text.innerHTML = `Všechny lodě zničené v čase: ${time}s`;
       bx.style.backgroundImage = "url('./res/img/ship.png')";
-      destroyedShips.innerHTML = `Zničené lodě: ${ships}`;
     } else {
-      bx.style.backgroundImage = "url('./res/img/cross.png')";
+      if (clicked.includes(index)) return;
+      if (array.includes(index)) {
+        ships++;
+        bx.style.backgroundImage = "url('./res/img/ship.png')";
+        destroyedShips.innerHTML = `Zničené lodě: ${ships}`;
+      } else {
+        bx.style.backgroundImage = "url('./res/img/cross.png')";
+      }
+      clicked.push(index);
     }
-    clicked.push(index);
+    
   };
 });
 

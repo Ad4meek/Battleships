@@ -31,7 +31,7 @@ main {
 .box {
   height: 100px;
   width: 100px;
-  border: 1px solid black;
+  border: 2px solid black;
   background-size: cover;
   transition: all 0.3s ease;
 }
@@ -41,7 +41,7 @@ main {
 }
 
 .game {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 #timer {
@@ -66,6 +66,10 @@ main {
 }
 
 #play_again {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 25px;
   background-color: transparent;
   padding: 1rem;
@@ -82,5 +86,23 @@ main {
 }
 
 #play_again:hover {
-  background-color: #4b7c926c;
+  background-color: #1c415241;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  backdrop-filter: blur(10px);
+}
+
+#overlay_text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
 }
