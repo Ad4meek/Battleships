@@ -21,7 +21,7 @@ main {
 }
 
 .controls img {
-  margin: 20rem 0;
+  margin: 1rem 0;
 }
 
 .row {
@@ -29,11 +29,11 @@ main {
 }
 
 .box {
-  height: 400px;
-  width: 400px;
-  border: 5px solid black;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
   background-size: cover;
-  transition: 0.4 ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .box:hover {
@@ -41,11 +41,11 @@ main {
 }
 
 .game {
-  border: 5px solid black;
+  border: 1px solid black;
 }
 
 #timer {
-  font-size: 10rem;
+  font-size: 3rem;
 }
 
 .ships {
@@ -55,25 +55,26 @@ main {
 
 .ship_image {
   background-image: url(../img/shipfavicon.png);
-  height: 200px;
-  width: 200px;
+  height: 60px;
+  width: 60px;
   background-size: cover;
+  margin-left: 1rem;
 }
 
 #destroyedShips {
-  font-size: 10rem;
+  font-size: 3rem;
 }
 
 #play_again {
   border-radius: 25px;
   background-color: transparent;
-  padding: 2rem;
-  margin: 5rem;
-  font-size: 12rem;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 4rem;
   cursor: pointer;
   transition: all 0.4s ease;
   font-family: 'Oswald', sans-serif;
-  border: 10px solid black;
+  border: 1px solid black;
 }
 
 .controls {
