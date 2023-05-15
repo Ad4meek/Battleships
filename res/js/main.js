@@ -15,7 +15,7 @@ interval = setInterval(() => {
   timer.innerHTML = `Čas: ${time}s`;
 }, 1000);
 
-for (let index = 0; index < 12; index++) {
+for (let index = 0; index < 10; index++) {
   let number;
   do {
     number = Math.floor(Math.random() * box.length);
@@ -28,7 +28,7 @@ console.log(array);
 
 [...box].forEach((bx, index) => {
   bx.onclick = () => {
-    if (ships == 11) {
+    if (ships == 9) {
       overlay.style.display = "block";
       overlay_text.innerHTML = `Všechny lodě zničené v čase: ${time}s`;
       bx.style.backgroundImage = "url('./res/img/ship.png')";
