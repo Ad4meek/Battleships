@@ -1,2 +1,2 @@
 # Battleships
-[View](https://ad4meek.github.io/battleships/)
+[View](https://ad4meek.github.io/Battleships/)
