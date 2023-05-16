@@ -23,9 +23,6 @@ for (let index = 0; index < 10; index++) {
   array.push(number);
 }
 
-array.sort();
-console.log(array);
-
 [...box].forEach((bx, index) => {
   bx.onclick = () => {
     if (ships == 9) {
